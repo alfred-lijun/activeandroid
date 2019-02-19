@@ -1,5 +1,6 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.novoda.bintray-release'
+apply plugin: 'com.github.dcendents.android-maven'
+group='com.github.alfred-lijun'
 
 android {
     compileSdkVersion rootProject.android.compileSdkVersion
@@ -20,17 +21,6 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile rootProject.ext.dependencies["support-v4"]
-}
-
-publish {
-    artifactId = 'activeandroid'
-    uploadName = 'activeandroid'
-    publishVersion = '1.0.0'
-    userOrg = rootProject.userOrg
-    groupId = rootProject.groupId
-    desc = rootProject.desc
-    website = 'https://github.com/alfred-lijun/activeandroid'
-    licences = rootProject.licences
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation rootProject.ext.dependencies["support-v4"]
 }

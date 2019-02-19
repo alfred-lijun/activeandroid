@@ -20,6 +20,6 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile project(':activeandroid')
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':activeandroid')
 }
